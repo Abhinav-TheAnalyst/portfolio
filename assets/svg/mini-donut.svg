@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 80" class="mini-chart">
+  <circle cx="50" cy="40" r="30" fill="none" stroke="#FF6B4A" stroke-width="2" stroke-dasharray="188.4 94.2"/>
+  <circle cx="50" cy="40" r="20" fill="none" stroke="#4FACFE" stroke-width="2" stroke-dasharray="125.6 62.8"/>
+  <circle cx="50" cy="40" r="10" fill="#2BB3A4"/>
+</svg>
