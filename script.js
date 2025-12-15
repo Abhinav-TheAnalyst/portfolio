@@ -324,4 +324,40 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
+// Technical panels: expand/collapse behavior
+document.addEventListener('DOMContentLoaded', function () {
+  try {
+    const toggles = Array.from(document.querySelectorAll('.tech-toggle'));
+    toggles.forEach(btn => {
+      const panelId = btn.getAttribute('aria-controls');
+      const panel = panelId ? document.getElementById(panelId) : btn.nextElementSibling;
+      if (!panel) return;
+
+      // prepare panel for height animation
+      panel.style.maxHeight = panel.classList.contains('open') ? panel.scrollHeight + 'px' : '0px';
+
+      btn.addEventListener('click', function () {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        if (expanded) {
+          // collapse
+          panel.style.maxHeight = panel.scrollHeight + 'px';
+          // allow the browser to paint before setting to 0
+          requestAnimationFrame(() => {
+            panel.classList.remove('open');
+            panel.style.maxHeight = '0px';
+          });
+          btn.setAttribute('aria-expanded', 'false');
+        } else {
+          // open
+          panel.classList.add('open');
+          panel.style.maxHeight = panel.scrollHeight + 'px';
+          btn.setAttribute('aria-expanded', 'true');
+          // ensure panel is visible in viewport on open
+          setTimeout(() => { try { panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); } catch (e) {} }, 220);
+        }
+      });
+    });
+  } catch (e) { /* fail silently */ }
+});
+
 
