@@ -87,46 +87,8 @@ document.addEventListener('DOMContentLoaded', function () {
           themeToggle.setAttribute('aria-pressed', pressed);
         }
       } catch (e) { }
-    }
+      });
 
-    function getPreferred() {
-      try {
-        const stored = localStorage.getItem(KEY);
-        if (stored === 'dark' || stored === 'light') return stored;
-      } catch (e) {}
-      try {
-        return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      } catch (e) {}
-      return 'light';
-    }
-
-    const initial = getPreferred();
-    applyTheme(initial === 'dark' ? 'dark' : 'light');
-
-    if (!themeToggle) return;
-
-    themeToggle.addEventListener('click', function () {
-      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-      const next = isDark ? 'light' : 'dark';
-      try { localStorage.setItem(KEY, next); } catch (e) {}
-      applyTheme(next);
-    });
-
-    // allow keyboard activation via Space/Enter
-    themeToggle.addEventListener('keydown', function (ev) {
-      if (ev.key === ' ' || ev.key === 'Enter') { ev.preventDefault(); themeToggle.click(); }
-    });
-  })();
-
-  
-  (function setupFormHandler(){
-    const contactForm = document.getElementById('contactForm');
-    if (!contactForm) return;
-
-    const submitBtn = contactForm.querySelector('.form-submit-btn');
-    const formLoading = document.getElementById('formLoading');
-    const formSuccess = document.getElementById('formSuccess');
-    const formError = document.getElementById('formError');
 
     contactForm.addEventListener('submit', function(e) {
       
