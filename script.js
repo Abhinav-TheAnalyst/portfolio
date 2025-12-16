@@ -87,17 +87,47 @@ document.addEventListener('DOMContentLoaded', function () {
           themeToggle.setAttribute('aria-pressed', pressed);
         }
       } catch (e) { }
-      });
+    }
 
+    // Initialize theme from localStorage on page load
+    try {
+      const stored = localStorage.getItem(KEY);
+      if (stored) {
+        applyTheme(stored);
+      }
+    } catch (e) { }
+
+    // Toggle theme on button click
+    if (themeToggle) {
+      themeToggle.addEventListener('click', function() {
+        try {
+          const current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+          const next = current === 'dark' ? 'light' : 'dark';
+          applyTheme(next);
+          localStorage.setItem(KEY, next);
+        } catch (e) { }
+      });
+    }
+  })();
+
+  // Contact form handler
+  (function setupContactForm(){
+    const contactForm = document.getElementById('contactForm');
+    if (!contactForm) return;
+
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const formLoading = document.getElementById('formLoading');
+    const formSuccess = document.getElementById('formSuccess');
+    const formError = document.getElementById('formError');
+
+    if (!submitBtn || !formLoading || !formSuccess) return;
 
     contactForm.addEventListener('submit', function(e) {
-      
       submitBtn.disabled = true;
       formLoading.style.display = 'flex';
       formSuccess.style.display = 'none';
-      formError.style.display = 'none';
+      if (formError) formError.style.display = 'none';
 
-      
       setTimeout(() => {
         submitBtn.disabled = false;
         formLoading.style.display = 'none';
