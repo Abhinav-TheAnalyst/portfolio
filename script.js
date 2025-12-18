@@ -2,8 +2,7 @@
 
 
 if (window.location.hash) {
-  
-  window.history.replaceState(null, null, window.location.pathname + window.location.search);
+
 }
 
 
@@ -350,6 +349,70 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   } catch (e) { /* fail silently */ }
-});
 
+  // Projects Slider functionality
+  (function initProjectsSlider() {
+    const track = document.getElementById('projectsTrack');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const dotsContainer = document.getElementById('sliderDots');
+    
+    if (!track || !prevBtn || !nextBtn) return;
+
+    const cards = Array.from(track.querySelectorAll('.project-card'));
+    const cardWidth = cards[0].offsetWidth;
+    const gap = 32; // 2rem in pixels
+    let currentIndex = 0;
+
+    // Create dots
+    cards.forEach((_, index) => {
+      const dot = document.createElement('div');
+      dot.classList.add('dot');
+      if (index === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => goToSlide(index));
+      dotsContainer.appendChild(dot);
+    });
+
+    function updateSlider() {
+      const offset = -currentIndex * (cardWidth + gap);
+      track.style.transform = `translateX(${offset}px)`;
+      
+      // Update active card
+      cards.forEach((card, index) => {
+        card.classList.toggle('active', index === currentIndex);
+      });
+      
+      // Update dots
+      document.querySelectorAll('.dot').forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentIndex);
+      });
+
+      // Update button states
+      prevBtn.disabled = currentIndex === 0;
+      nextBtn.disabled = currentIndex === cards.length - 1;
+    }
+
+    function goToSlide(index) {
+      currentIndex = Math.max(0, Math.min(index, cards.length - 1));
+      updateSlider();
+    }
+
+    prevBtn.addEventListener('click', () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateSlider();
+      }
+    });
+
+    nextBtn.addEventListener('click', () => {
+      if (currentIndex < cards.length - 1) {
+        currentIndex++;
+        updateSlider();
+      }
+    });
+
+    // Initialize
+    updateSlider();
+  })();
+});
 
