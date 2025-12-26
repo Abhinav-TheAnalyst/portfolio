@@ -1,0 +1,605 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abhinav Verma | Data Analyst & BI Specialist</title>
+  <meta name="description" content="Abhinav Verma, Data Analyst specializing in Python, SQL, and Power BI. Transforming raw data into actionable business intelligence. View my portfolio.">
+  <meta name="keywords" content="data analyst, Python, SQL, Tableau, Power BI, data visualization, machine learning, portfolio, Abhinav Verma">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=14">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script defer src="script.js?v=6&t=20250312001"></script>
+</head>
+<body>
+
+<header class="fixed-header">
+  <div class="header-container">
+    <div class="logo">
+      <a href="#home" class="logo-btn" id="logoBtn" title="Reload page"><span class="logo-text">AV</span></a>
+    </div>
+    <nav class="main-nav">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#contact" class="nav-link">Contact</a>
+      <a href="Abhinav_Verma_Data_Analyst_CV.pdf" class="nav-link resume-link" target="_blank" rel="noopener noreferrer">Resume</a>
+    </nav>
+    <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Open menu">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="header-right">
+      <div class="social-links">
+        <a href="https://github.com/Abhinav-TheAnalyst" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/abhinav-theanalyst" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </div>
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="main-content">
+    <!-- Hero: main landing area and primary call-to-action -->
+    <section id="home" class="hero">
+      <canvas id="constellation-canvas"></canvas>
+      <div class="hero-content">
+        <div class="hero-center">
+          <div class="hero-text">
+            <h1 class="hero-title">Turning Raw Data into <br><span class="text-gradient">Actionable Insights</span></h1>
+            <h2 class="hero-subtitle">Abhinav Verma <span class="separator">|</span> <span class="typing-text"></span></h2>
+            <p class="lead">I build efficient data workflows, design interactive dashboards, and uncover meaningful patterns in complex data.</p>
+            <div class="hero-ctas">
+              <div class="top-buttons">
+                <a class="btn playbtn secondary-btn" href="#projects"><div><span>View Projects</span></div></a>
+                <a class="btn playbtn secondary-btn" href="https://github.com/Abhinav-TheAnalyst" target="_blank"><div><span>GitHub Profile</span></div></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Outcome removed from this position (moved after Learning Path per user request) -->
+
+    <!-- About: profile summary, skills overview, education and certifications -->
+    <section id="about" class="section">
+      <div class="container">
+    <div class="section-title-container">
+      <h2 class="section-background-title">PROFILE</h2>
+      <h3 class="section-main-title">Professional Profile</h3>
+    </div>
+
+        <div class="about-intro">
+          <div class="intro-content">
+            <h3>Data Analyst</h3>
+            <p>I specialize in structuring complex problems and building <strong>analytical frameworks</strong>. My focus is on ensuring <strong>data integrity</strong> and delivering insights that align directly with business objectives.</p>
+            <p>I use Python (Pandas, NumPy) for <strong>data manipulation</strong> and SQL for <strong>complex querying</strong>. I deliver findings through interactive <strong>Power BI dashboards</strong> and concise reports.</p>
+          </div>
+          <div class="intro-stats">
+            <div class="stat-item">
+              <div class="stat-number">5+</div>
+              <div class="stat-label">Projects</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">2+</div>
+              <div class="stat-label">Years Exp.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-services">
+          <h3>What I Do</h3>
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-chart-bar"></i>
+              </div>
+              <h4>Dashboards & Reports</h4>
+              <p>Designing interactive Power BI & Tableau dashboards that track KPIs and make data easy to understand.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-database"></i>
+              </div>
+              <h4>Data Analysis</h4>
+              <p>Using Python (Pandas/NumPy) to find patterns, forecast trends, and solve business problems.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-code"></i>
+              </div>
+              <h4>Data Cleaning & SQL</h4>
+              <p>Writing efficient SQL queries and Python scripts to clean messy data and automate daily tasks.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process: Analytical Framework -->
+    <section id="process" class="section">
+      <div class="container">
+    <div class="section-title-container">
+      <h2 class="section-background-title">WORKFLOW</h2>
+      <h3 class="section-main-title">Analytical Framework</h3>
+    </div>
+        <p class="section-subtitle">MY STEP-BY-STEP APPROACH TO SOLVING PROBLEMS</p>
+        <div class="process-steps-grid">
+          <div class="process-step-card">
+            <div class="step-badge">1</div>
+            <div class="step-content">
+              <h3>Define Problem</h3>
+              <p>Understanding the business question and what success looks like before touching the data.</p>
+              <span class="step-tag">Plan</span>
+            </div>
+          </div>
+          <div class="process-step-card">
+            <div class="step-badge">2</div>
+            <div class="step-content">
+              <h3>Collect Data</h3>
+              <p>Gathering raw data from databases (SQL), Excel files, or APIs.</p>
+              <span class="step-tag">Collect</span>
+            </div>
+          </div>
+          <div class="process-step-card">
+            <div class="step-badge">3</div>
+            <div class="step-content">
+              <h3>Clean Data</h3>
+              <p>Removing errors, handling missing values, and organizing data using Python/Pandas.</p>
+              <span class="step-tag">Clean</span>
+            </div>
+          </div>
+          <div class="process-step-card">
+            <div class="step-badge">4</div>
+            <div class="step-content">
+              <h3>Analyze Trends</h3>
+              <p>Using statistics to find patterns, correlations, and the "why" behind the numbers.</p>
+              <span class="step-tag">Analyze</span>
+            </div>
+          </div>
+          <div class="process-step-card">
+            <div class="step-badge">5</div>
+            <div class="step-content">
+              <h3>Visualize Results</h3>
+              <p>Creating clear charts and dashboards to present findings and recommendations.</p>
+              <span class="step-tag">Present</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <!-- Learning Path: Premium Interactive Timeline -->
+    <section id="learning-path" class="learning-path-section">
+      <div class="container">
+        <div class="section-title-container">
+          <h2 class="section-background-title">TIMELINE</h2>
+          <h3 class="section-main-title">My Journey</h3>
+        </div>
+        <div class="learning-header">
+          <p class="learning-intro">My path from learning the basics to becoming job-ready.</p>
+        </div>
+
+        <!-- Premium Interactive Timeline -->
+        <div class="premium-timeline">
+          
+          <!-- Timeline Item 1: 2021 -->
+          <div class="timeline-phase phase-1" data-phase="1">
+            <div class="timeline-year">2021</div>
+            <div class="phase-card">
+              <div class="phase-header">
+                <h3 class="phase-title">College & Basics</h3>
+              </div>
+              <p class="phase-milestone">Computer Science Degree</p>
+              <p class="phase-description">Learned the basics of programming, logic, and problem-solving during my B.Tech.</p>
+              <div class="phase-skills">
+                <span class="skill-badge">Stats & Probability</span>
+                <span class="skill-badge">Capstone Project</span>
+                <span class="skill-badge">Data Interest</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2: 2022-2023 -->
+          <div class="timeline-phase phase-2" data-phase="2">
+            <div class="timeline-year">2022-23</div>
+            <div class="phase-card">
+              <div class="phase-header">
+                <h3 class="phase-title">Learning Data Skills</h3>
+              </div>
+              <p class="phase-milestone">Intensive Training</p>
+              <p class="phase-description">Focused on learning the core tools: SQL for databases and Python for data analysis.</p>
+              <div class="phase-skills">
+                <span class="skill-badge">Python Basics</span>
+                <span class="skill-badge">Excel Mastery</span>
+                <span class="skill-badge">SQL Fundamentals</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3: 2023-2024 -->
+          <div class="timeline-phase phase-3" data-phase="3">
+            <div class="timeline-year">2023-24</div>
+            <div class="phase-card">
+              <div class="phase-header">
+                <h3 class="phase-title">Building Projects</h3>
+              </div>
+              <p class="phase-milestone">Real-World Practice</p>
+              <p class="phase-description">Started building complete projects using real datasets. Learned how to clean messy data and find insights.</p>
+              <div class="phase-skills">
+                <span class="skill-badge">Pandas & NumPy</span>
+                <span class="skill-badge">EDA & Visualization</span>
+                <span class="skill-badge">Kaggle Projects</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 4: 2024-2025 (Active) -->
+          <div class="timeline-phase phase-4" data-phase="4">
+            <div class="timeline-year">2024-25</div>
+            <div class="phase-card">
+              <div class="phase-header">
+                <h3 class="phase-title">Job Ready</h3>
+              </div>
+              <p class="phase-milestone">Professional Portfolio</p>
+              <p class="phase-description">Creating business-quality dashboards and reports. Ready to work in a professional environment.</p>
+              <div class="phase-skills">
+                <span class="skill-badge">Advanced SQL</span>
+                <span class="skill-badge">Power BI & Dashboards</span>
+                <span class="skill-badge">Reproducible Projects</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Key Strengths Integrated (No longer a separate section) -->
+          <div class="outcome-integrated">
+            <div class="impact-header">
+              <h3 id="impact-heading">Key Strengths</h3>
+              <p class="impact-subtitle">WHAT I BRING TO THE TABLE</p>
+            </div>
+
+            <div class="impact-grid">
+              <!-- Card 1 -->
+              <div class="impact-card">
+                <div class="impact-icon"><i class="fas fa-cogs"></i></div>
+                <h4>Automated Workflows</h4>
+                <p>I create scripts in Python and SQL that automate boring tasks like data cleaning, saving time and reducing errors.</p>
+                <div class="impact-tags">
+                  <span class="skill-tag">Python</span>
+                  <span class="skill-tag">SQL</span>
+                  <span class="skill-tag">Excel</span>
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="impact-card">
+                <div class="impact-icon"><i class="fas fa-chart-pie"></i></div>
+                <h4>Interactive Dashboards</h4>
+                <p>I design easy-to-use dashboards in Power BI that help managers see key numbers and make quick decisions.</p>
+                <div class="impact-tags">
+                  <span class="skill-tag">Power BI</span>
+                  <span class="skill-tag">Tableau</span>
+                  <span class="skill-tag">Plotly</span>
+                </div>
+              </div>
+
+              <!-- Card 3 -->
+              <div class="impact-card">
+                <div class="impact-icon"><i class="fas fa-code-branch"></i></div>
+                <h4>Clean & Reusable Code</h4>
+                <p>I write clean, organized code and use Git so that my work is easy to understand and can be used by others.</p>
+                <div class="impact-tags">
+                  <span class="skill-tag">GitHub</span>
+                  <span class="skill-tag">NumPy</span>
+                  <span class="skill-tag">EDA</span>
+                </div>
+              </div>
+
+              <!-- Card 4 -->
+              <div class="impact-card">
+                <div class="impact-icon"><i class="fas fa-lightbulb"></i></div>
+                <h4>Business Focus</h4>
+                <p>I don't just look at numbers; I focus on what those numbers mean for the business and how they can solve actual problems.</p>
+                <div class="impact-tags">
+                  <span class="skill-tag">Analysis</span>
+                  <span class="skill-tag">Strategy</span>
+                  <span class="skill-tag">Communication</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills: redesigned recruiter-focused layout -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-title-container">
+          <h2 class="section-background-title">SKILLS</h2>
+          <h3 class="section-main-title">Technical Skills</h3>
+        </div>
+        <p class="section-subtitle">THE TOOLS I USE TO SOLVE DATA PROBLEMS</p>
+
+        <div class="skills-cards">
+          <!-- card: Programming -->
+          <div class="skill-card">
+            <div class="skill-card-head">
+              <div class="skill-icon"><i class="fas fa-code"></i></div>
+              <h3>Languages</h3>
+            </div>
+            <div class="skill-item">
+              <div class="skill-meta">
+                <span class="skill-name">Python</span>
+                <span class="skill-grade">Expert</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="95%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-meta">
+                <span class="skill-name">SQL</span>
+                <span class="skill-grade">Advanced</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85%"></div></div>
+            </div>
+          </div>
+
+          <!-- card: Data Processing -->
+          <div class="skill-card">
+            <div class="skill-card-head">
+              <div class="skill-icon"><i class="fas fa-layer-group"></i></div>
+              <h3>Data Processing</h3>
+            </div>
+            <div class="skill-item">
+              <div class="skill-meta">
+                <span class="skill-name">Pandas</span>
+                <span class="skill-grade">Expert</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-meta">
+                <span class="skill-name">NumPy</span>
+                <span class="skill-grade">Advanced</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80%"></div></div>
+            </div>
+          </div>
+
+          <!-- card: Visualization -->
+          <div class="skill-card">
+            <div class="skill-card-head">
+              <div class="skill-icon"><i class="fas fa-chart-pie"></i></div>
+              <h3>Visualization</h3>
+            </div>
+            <div class="skill-item">
+              <div class="skill-meta">
+                <span class="skill-name">Power BI</span>
+                <span class="skill-grade">Advanced</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-meta">
+                <span class="skill-name">Tableau</span>
+                <span class="skill-grade">Intermediate</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="60%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-meta">
+                <span class="skill-name">Matplotlib/Seaborn</span>
+                <span class="skill-grade">Advanced</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75%"></div></div>
+            </div>
+          </div>
+
+          <!-- card: Tools -->
+          <div class="skill-card">
+            <div class="skill-card-head">
+              <div class="skill-icon"><i class="fas fa-tools"></i></div>
+              <h3>Tools & Platforms</h3>
+            </div>
+            <div class="skill-item">
+              <div class="skill-meta">
+                <span class="skill-name">Excel (Advanced)</span>
+                <span class="skill-grade">Advanced</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-meta">
+                <span class="skill-name">Git & GitHub</span>
+                <span class="skill-grade">Expert</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="95%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-meta">
+                <span class="skill-name">Jupyter/VS Code</span>
+                <span class="skill-grade">Expert</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="95%"></div></div>
+            </div>
+          </div>
+
+          <!-- card: Analytics & Strategy -->
+          <div class="skill-card">
+            <div class="skill-card-head">
+              <div class="skill-icon"><i class="fas fa-brain"></i></div>
+              <h3>Analytics & Strategy</h3>
+            </div>
+            <div class="skill-item">
+              <div class="skill-meta">
+                <span class="skill-name">Statistics & Probability</span>
+                <span class="skill-grade">Intermediate</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="60%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-meta">
+                <span class="skill-name">Business Analytics & KPI</span>
+                <span class="skill-grade">Intermediate</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="60%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Redesigned Legend -->
+        <div class="skills-legend">
+          <div class="legend-badge"><span class="legend-color expert"></span>Expert (Production Ready)</div>
+          <div class="legend-badge"><span class="legend-color advanced"></span>Advanced (Daily Use)</div>
+          <div class="legend-badge"><span class="legend-color intermediate"></span>Intermediate (Familiar)</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Data Analyst Projects Section with Slider -->
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        <div class="section-title-container">
+          <h2 class="section-background-title">PORTFOLIO</h2>
+          <h3 class="section-main-title">Featured Projects</h3>
+        </div>
+        <p class="projects-subtitle">SOLVING REAL PROBLEMS WITH DATA</p>
+        
+      </div>
+    </section>
+
+    <!-- Final Call to Action Section -->
+    <section id="final-cta" class="section final-cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Ready to build something great?</h2>
+          <p>I'm currently open to new opportunities and would love to hear about your project. Let's discuss how my data skills can help you achieve your goals.</p>
+          <div class="cta-buttons">
+            <a class="btn playbtn" href="#contact">Get in Touch</a>
+            <a class="btn playbtn secondary-btn" href="Abhinav_Verma_Data_Analyst_CV.pdf" target="_blank">Download Resume</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact: contact details and message form. Form ID `contactForm` is used by scripts. -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-title-container">
+          <h2 class="section-background-title">CONTACT</h2>
+          <h3 class="section-main-title">Let's Collaborate</h3>
+        </div>
+        <div class="contact-wrapper">
+          <div class="contact-info-card">
+            <h3>Get in Touch</h3>
+            <p class="contact-intro">Have a project in mind or want to discuss data analytics? I'm always open to discussing new opportunities and ideas.</p>
+            <div class="contact-details">
+              <div class="contact-item">
+                <div class="icon-box"><i class="fas fa-envelope"></i></div>
+                <div>
+                  <strong>Email</strong>
+                  <a href="mailto:abhinavvermalmp007@gmail.com">abhinavvermalmp007@gmail.com</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="icon-box"><i class="fas fa-phone"></i></div>
+                <div>
+                  <strong>Phone</strong>
+                  <a href="tel:+919792436319">+91-9792436319</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="icon-box"><i class="fab fa-linkedin-in"></i></div>
+                <div>
+                  <strong>LinkedIn</strong>
+                  <a href="https://www.linkedin.com/in/abhinav-theanalyst" target="_blank">linkedin.com/in/abhinav-theanalyst</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="icon-box"><i class="fab fa-github"></i></div>
+                <div>
+                  <strong>GitHub</strong>
+                  <a href="https://github.com/Abhinav-TheAnalyst" target="_blank">github.com/Abhinav-TheAnalyst</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="icon-box"><i class="fas fa-map-marker-alt"></i></div>
+                <div>
+                  <strong>Location</strong>
+                  <span>Lucknow, India</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form-card">
+            <h3>Send a Message</h3>
+            <form id="contactForm" action="https://formsubmit.co/abhinavvermalmp007@gmail.com" method="POST">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_next" value="">
+              <input type="text" name="name" placeholder="Your Name" required>
+              <input type="email" name="email" placeholder="Your Email" required>
+              <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+              <div class="form-submit-wrapper">
+                <button class="btn form-submit-btn" type="submit">Send Message</button>
+                <div class="form-loading" id="formLoading" style="display:none;">
+                  <i class="fas fa-spinner fa-spin"></i>
+                </div>
+              </div>
+              <div class="form-message form-success" id="formSuccess" style="display:none;">
+                <i class="fas fa-check-circle"></i> Message sent successfully! I'll get back to you soon.
+              </div>
+              <div class="form-message form-error" id="formError" style="display:none;">
+                <i class="fas fa-exclamation-circle"></i> Something went wrong. Please try again.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer: copyright, craft note, and page utilities (scroll-to-top) -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-main">
+          <div class="footer-about">
+            <a href="#home" class="footer-logo">AV</a>
+            <p class="footer-tagline">Data-driven insights for modern business challenges.</p>
+          </div>
+          <div class="footer-socials">
+            <a href="https://github.com/Abhinav-TheAnalyst" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/abhinav-theanalyst" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:abhinavvermalmp007@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-copyright">© 2025 Abhinav Verma. All rights reserved.</div>
+          <nav class="footer-nav">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <button class="scroll-to-top" id="scrollToTop" title="Scroll to Top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+</main>
+</body>
+</html>

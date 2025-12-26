@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>404 — Lost &amp; Found</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg-color: #0d1117;
+  --primary-text-color: #e6edf3;
+  --secondary-text-color: #8b949e;
+  --accent-color: #4A6CF7;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --card-bg: rgba(22, 27, 34, 0.6);
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--primary-text-color);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Animated background */
+@keyframes move-background {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(1000px, 0, 0); }
+}
+
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.stars:before {
+  content: '';
+  position: absolute;
+  width: 2000px; /* Wider for animation */
+  height: 100%;
+  background-image: radial-gradient(1px 1px at 25px 5px, white, transparent),
+                    radial-gradient(1px 1px at 50px 25px, white, transparent),
+                    radial-gradient(1px 1px at 125px 120px, white, transparent),
+                    radial-gradient(1.5px 1.5px at 250px 70px, white, transparent),
+                    radial-gradient(1px 1px at 300px 150px, white, transparent),
+                    radial-gradient(1.5px 1.5px at 400px 50px, white, transparent),
+                    radial-gradient(1px 1px at 500px 100px, white, transparent),
+                    radial-gradient(1.5px 1.5px at 600px 130px, white, transparent);
+  background-size: 600px 200px;
+  opacity: 0.3;
+  animation: move-background 200s linear infinite;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 650px;
+  padding: 40px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 30px;
+    margin: 20px;
+  }
+}
+
+/* Glitchy 404 Text */
+.glitch-404 {
+  font-size: 9rem;
+  font-weight: 900;
+  line-height: 1;
+  margin: 0 0 10px 0;
+  position: relative;
+  color: var(--primary-text-color);
+  animation: glitch-shake 3s infinite linear;
+}
+
+.glitch-404::before,
+.glitch-404::after {
+  content: '404';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.glitch-404::before {
+  left: 2px;
+  text-shadow: -2px 0 #ff00c1;
+  clip: rect(44px, 450px, 56px, 0);
+  animation: glitch-anim-1 2s infinite linear alternate-reverse;
+}
+
+.glitch-404::after {
+  left: -2px;
+  text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
+  clip: rect(85px, 450px, 90px, 0);
+  animation: glitch-anim-2 3s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-shake {
+  0%, 100% { transform: skewX(0deg); }
+  5% { transform: skewX(2deg); }
+  10% { transform: skewX(-2deg); }
+  15% { transform: skewX(0deg); }
+}
+
+@keyframes glitch-anim-1 {
+  0% { clip: rect(42px, 9999px, 44px, 0); }
+  20% { clip: rect(17px, 9999px, 96px, 0); }
+  40% { clip: rect(50px, 9999px, 62px, 0); }
+  60% { clip: rect(33px, 9999px, 19px, 0); }
+  80% { clip: rect(80px, 9999px, 52px, 0); }
+  100% { clip: rect(12px, 9999px, 75px, 0); }
+}
+
+@keyframes glitch-anim-2 {
+  0% { clip: rect(2px, 9999px, 98px, 0); }
+  20% { clip: rect(95px, 9999px, 99px, 0); }
+  40% { clip: rect(48px, 9999px, 13px, 0); }
+  60% { clip: rect(62px, 9999px, 78px, 0); }
+  80% { clip: rect(10px, 9999px, 66px, 0); }
+  100% { clip: rect(83px, 9999px, 40px, 0); }
+}
+
+/* Text Content */
+.title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--primary-text-color);
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--accent-color);
+  margin: 8px 0 20px;
+  font-weight: 500;
+}
+
+.desc {
+  color: var(--secondary-text-color);
+  line-height: 1.6;
+  margin: 0 0 30px;
+  font-size: 1rem;
+}
+
+/* Buttons */
+.btn-row {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid var(--border-color);
+  background: transparent;
+  color: var(--primary-text-color);
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.btn-primary {
+  background: var(--accent-color);
+  color: #fff;
+  border-color: var(--accent-color);
+  box-shadow: 0 6px 20px rgba(74, 108, 247, 0.2);
+}
+
+.btn-primary:hover {
+  background: #3a5ce1; /* Slightly darker accent */
+  border-color: #3a5ce1;
+  color: #fff;
+}
+
+/* Meta Footer */
+.meta {
+  font-size: 0.9rem;
+  color: var(--secondary-text-color);
+  margin-top: 30px;
+}
+
+.meta a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.meta a:hover {
+  text-decoration: underline;
+}
+</style>
+</head>
+
+<body>
+<div class="stars"></div>
+<main class="container" role="main" aria-labelledby="title-404">
+  <div class="glitch-404">404</div>
+  <h1 id="title-404" class="title">You Drifted Off the Path</h1>
+  <p class="subtitle">But every detour is part of the journey.</p>
+  <p class="desc">The page you're looking for doesn't exist — consider this a chance to explore new routes. Your workspace is still here; use the links below to navigate back.</p>
+  <div class="btn-row">
+    <a class="btn btn-primary" href="index.html"><i class="fas fa-home"></i> Go Back Home</a>
+    <a class="btn" href="index.html#projects"><i class="fas fa-search"></i> Explore Projects</a>
+    <a class="btn" href="Abhinav_Verma_Data_Analyst_CV.pdf" target="_blank"><i class="fas fa-file-alt"></i> Resume</a>
+  </div>
+  <p class="meta">Error Code: 404 · Missing Resource · Contact: <a href="mailto:abhinavvermalmp007@gmail.com">abhinavvermalmp007@gmail.com</a></p>
+</main>
+</body>
+</html>
